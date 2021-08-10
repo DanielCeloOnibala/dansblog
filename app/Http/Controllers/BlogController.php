@@ -12,4 +12,10 @@ class BlogController extends Controller
         $data = $post->orderBy('created_at', 'desc')->get();
         return view('blog', compact('data'));
     }
+
+    public function isi_blog($slug)
+    {
+        $data = Posts::where('slug', $slug)->get();
+        return view('blog.isi_post', compact('data'));
+    }
 }

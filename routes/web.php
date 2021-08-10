@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'BlogController@index');
-
+/*Route::get('/isi_post', function(){
+    return view('blog.isi_post');
+});*/
+Route::get('/(slug)', 'BlogController@isi_blog')->name('blog.isi');
 
 Route::get('/home', function () {
     return view('home');
