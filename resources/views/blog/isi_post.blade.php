@@ -26,7 +26,8 @@
         <!-- /PAGE HEADER -->
         <div class="col-md-8 hot-post-left">
         <br>
-        {{ $isi_post->content }}
+        
+        {!! $isi_post->content !!}
     @endforeach
     </div>
 
