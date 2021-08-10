@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="{{ route('blog.list') }}">List Postingan</a></li>
+                        <li><a href="{{ route('blog.list') }}">Lebih Banyak Artikel</a></li>
                         <li><a href="#">Health</a></li>
                         <li><a href="#">Travel</a></li>
                     </ul>
