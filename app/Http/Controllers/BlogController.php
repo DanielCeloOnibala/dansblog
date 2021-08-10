@@ -15,7 +15,7 @@ class BlogController extends Controller
 
     public function isi_blog($slug)
     {
-        $data = Posts::where('slug', $slug)->get();
+        $data = Post::where('slug', $slug)->get();
         return view('blog.isi_post', compact('data'));
     }
 }

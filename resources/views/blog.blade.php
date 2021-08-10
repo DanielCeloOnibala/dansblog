@@ -1,6 +1,7 @@
 @extends('template_blog.content')
 
 @section('isi')
+<div class="col-md-8 hot-post-left">
 <!-- post -->
 <div class="post post-thumb">
   <a class="post-img" href="blog-post.html"><img src="{{ asset('public') }}/callie/img/hot-post-1.jpg" alt=""></a>
@@ -76,7 +77,7 @@
             @foreach($data as $post_terbaru)
             <div class="col-md-6">
              <div class="post">
-                <a class="post-img" href="{{$post_terbaru->slug}}"><img src="{{ $post_terbaru->gambar }}" alt=""></a>
+                <a class="post-img" href="{{ route('blog.isi', $post_terbaru->slug) }}"><img src="{{ $post_terbaru->gambar }}" alt=""></a>
                 <div class="post-body">
                    <div class="post-category">
                       <a href="category.html">{{ $post_terbaru->category->name }}</a>
@@ -93,6 +94,7 @@
       <!-- /post -->
   </div>
   <!-- /row -->
+</div>
 </div>
 @endsection
 
