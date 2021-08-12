@@ -1,4 +1,5 @@
 @extends('template_backend.home')
+@section('titlehead', 'Halaman Recycle Post')
 @section('subjudul','Recycle Bin Postingan')
 @section('content')
 

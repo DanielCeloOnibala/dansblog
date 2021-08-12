@@ -1,4 +1,5 @@
 @extends('template_backend.home')
+@section('titlehead', 'Halaman Data User')
 @section('subjudul','Users')
 @section('content')
 @if(Session::has('success'))

@@ -1,4 +1,5 @@
 @extends('template_backend.home')
+@section('titlehead', 'Form Penambahan User Baru')
 @section('subjudul','Tambah User')
 @section('content')
 @if(count($errors)>0)
@@ -38,6 +39,7 @@
     </div>
     <div class="form-group">
         <button class="btn btn-block btn-primary">Buat Akun User Baru</button>
+        <a href="{{route('user.index')}}" class="btn btn-block btn-danger">Kembali</a>
     </div>
 </form>
 @endsection

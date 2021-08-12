@@ -1,4 +1,5 @@
 @extends('template_backend.home')
+@section('titlehead', 'Halaman Data Post')
 @section('subjudul','Post')
 @section('content')
 

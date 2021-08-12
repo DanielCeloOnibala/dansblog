@@ -1,4 +1,5 @@
 @extends('template_backend.home')
+@section('titlehead', 'Halaman Data Kategori')
 @section('subjudul','Kategori')
 @section('content')
 @if(Session::has('success'))

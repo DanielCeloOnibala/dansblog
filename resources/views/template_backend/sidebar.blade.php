@@ -1,10 +1,17 @@
+<style>
+    .sidebar-brand{
+        background-color: ;
+        padding-right: 30px;
+    }
+</style>
 <div class="main-sidebar">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            <img src="{{ asset('public') }}/gambar/DansBlogLogo.png" width="65px" height="65px">
+            <a href="">DansBlog</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">St</a>
+            <img src="{{ asset('public') }}/gambar/DansBlogLogo.png" width="65px" height="65px">
           </div>
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>

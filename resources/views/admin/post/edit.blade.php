@@ -1,4 +1,5 @@
 @extends('template_backend.home')
+@section('titlehead', 'Form Edit Post')
 @section('subjudul','Edit Post')
 @section('content')
 @if(count($errors)>0)
@@ -58,6 +59,7 @@
 </div>
 <div class="form-group">
     <button class="btn btn-block btn-primary">Update Postingan</button>
+    <a href="{{route('post.index')}}" class="btn btn-block btn-danger">Kembali</a>
 </div>
 </form>
 <script src="{{asset('public')}}/ckeditor/ckeditor.js"></script>

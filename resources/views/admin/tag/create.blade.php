@@ -1,4 +1,5 @@
 @extends('template_backend.home')
+@section('titlehead', 'Form Pembuatan Tags')
 @section('subjudul','Tambah Tags')
 @section('content')
 @if(count($errors)>0)
@@ -22,6 +23,7 @@
     </div>
     <div class="form-group">
         <button class="btn btn-block btn-primary">Simpan Tags</button>
+        <a href="{{route('tag.index')}}" class="btn btn-block btn-danger">Kembali</a>
     </div>
 </form>
 @endsection

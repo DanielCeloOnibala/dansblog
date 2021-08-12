@@ -1,4 +1,5 @@
 @extends('template_backend.home')
+@section('titlehead', 'Form Edit Tags')
 @section('subjudul','Edit Tags')
 @section('content')
 @if(count($errors)>0)
@@ -23,6 +24,7 @@
     </div>
     <div class="form-group">
         <button class="btn btn-block btn-primary">Update Tags</button>
+        <a href="{{route('tag.index')}}" class="btn btn-block btn-danger">Kembali</a>
     </div>
 </form>
 @endsection

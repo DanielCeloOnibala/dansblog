@@ -1,5 +1,5 @@
 @extends('template_backend.home')
-
+@section('titlehead', 'HomePage')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

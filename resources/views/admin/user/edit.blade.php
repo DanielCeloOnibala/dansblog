@@ -1,4 +1,5 @@
 @extends('template_backend.home')
+@section('titlehead', 'Form Edit Data User')
 @section('subjudul','Edit Akun User')
 @section('content')
 @if(count($errors)>0)
@@ -47,6 +48,7 @@
     </div>
     <div class="form-group">
         <button class="btn btn-block btn-primary">Update Akun User</button>
+        <a href="{{route('user.index')}}" class="btn btn-block btn-danger">Kembali</a>
     </div>
 </form>
 @endsection
