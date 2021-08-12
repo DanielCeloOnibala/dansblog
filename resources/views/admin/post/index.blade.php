@@ -14,6 +14,7 @@
         <tr>
             <th>No</th>
             <th>Nama Post</th>
+            <th>Featured Post</th>
             <th>Kategori Post</th>
             <th>Daftar Tags</th>
             <th>Nama Penulis</th>
@@ -26,6 +27,7 @@
         <tr>
             <td>{{ $result + $post->firstItem() }}</td>
             <td>{{ $hasil->judul }}</td>
+            <td></td>
             <td>{{ $hasil->category->name }}</td>
             <td>
                 @foreach($hasil->tags as $tag)
@@ -36,7 +38,7 @@
             </td>
             <td>{{ $hasil->users->name }}</td>
             <td><img src="{{asset($hasil->gambar)}}" class="img-fluid" style="width: 100px"></td>
-            <td>                
+            <td align="center">                
                 <form action="{{ route('post.destroy', $hasil->id) }}" method="POST">
                     @csrf
                     @method('delete')

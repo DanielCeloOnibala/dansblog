@@ -17,40 +17,29 @@
                         <li><a href="#" class="social-instagram"><i class="fa fa-instagram"></i></a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="footer-widget">
-                    <h3 class="footer-title">Categories</h3>
-                    <div class="category-widget">
-                        <ul>
-                            @foreach($category as $hasil)
-                            <li><a href="#">{{$hasil->name}} <span>{{ $hasil->post->count() }}</span></a></li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            </div>            
             <div class="col-md-3">
                 <div class="footer-widget">
                     <h3 class="footer-title">Tags</h3>
                     <div class="tags-widget">
-                        <ul>
-                            @foreach($tags as $result2)
-                                <li><a href="#">{{$result2->name}}</a></li>
-                            @endforeach
+                        <ul>                            
+                            <li><a href="#">School</a></li>
+                            <li><a href="#">University</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Nation Interest</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6">
                 <div class="footer-widget">
-                    <h3 class="footer-title">Newsletter</h3>
-                    <div class="newsletter-widget">
-                        <form>
-                            <p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
-                            <input class="input" name="newsletter" placeholder="Enter Your Email">
-                            <button class="primary-button">Subscribe</button>
-                        </form>
+                    <h3 class="footer-title">Categories</h3>
+                    <div class="category-widget">
+                        <ul>
+                            @foreach($category_widget as $hasil)
+                            <li><a href="{{ route('blog.category', $hasil->slug) }}">{{$hasil->name}} <span>{{ $hasil->post->count() }}</span></a></li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -61,7 +50,7 @@
         <div class="footer-bottom row">
             <div class="col-md-6 col-md-push-6">
                 <ul class="footer-nav">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ url('') }}">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contacts</a></li>
                     <li><a href="#">Advertise</a></li>
@@ -81,7 +70,6 @@
     <!-- /container -->
 </footer>
 <!-- /FOOTER -->
-
 
 <!-- jQuery Plugins -->
 <script src="{{ asset('public') }}/callie/js/jquery.min.js"></script>

@@ -9,9 +9,14 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <title>Callie HTML Template</title>
+    <script>        
+        function sweet (){
+        alert("My Gmail : dasilva22.dc@gmail.com")
+    }
+    </script>
 
     <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet">    
 
     <!-- Bootstrap -->
     <link type="text/css" rel="stylesheet" href="{{ asset('public') }}/callie/css/bootstrap.min.css" />
@@ -40,17 +45,13 @@
             <div id="nav-top">
                 <div class="container">
                     <!-- social -->
-                    <ul class="nav-social">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <ul class="nav-social">                        
                     </ul>
                     <!-- /social -->
 
                     <!-- logo -->
                     <div class="nav-logo">
-                        <a href="index.html" class="logo"><img src="{{ asset('public') }}/callie/img/logo.png" alt=""></a>
+                        <a href="" class="logo"><img src="{{ asset('public') }}/callie/img/logo.png" alt=""></a>
                     </div>
                     <!-- /logo -->
 
@@ -59,8 +60,8 @@
                         <button class="aside-btn"><i class="fa fa-bars"></i></button>
                         <button class="search-btn"><i class="fa fa-search"></i></button>
                         <div id="nav-search">
-                            <form>
-                                <input class="input" name="search" placeholder="Enter your search...">
+                            <form action="{{ route('blog.cari') }}" method="get">
+                                <input class="input" name="cari" placeholder="Enter your search...">
                             </form>
                             <button class="nav-close search-close">
                                 <span></span>
@@ -78,21 +79,19 @@
                     <!-- nav -->
                     <ul class="nav-menu">
                         <li><a href="{{ url('') }}">Beranda</a></li>
+                        <li><a href="{{ route('blog.list') }}">Lebih Banyak Artikel</a></li>
                         <li class="has-dropdown">
                             <a href="">Category</a>
                             <div class="dropdown">
                                 <div class="dropdown-body">
                                     <ul class="dropdown-list">
-                                        @foreach($category as $result1)
-                                        <li><a href="category.html">{{ $result1->name }}</a></li>
+                                        @foreach($category_widget as $result1)
+                                        <li><a href="{{ route('blog.category', $result1->slug) }}">{{ $result1->name }}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="{{ route('blog.list') }}">Lebih Banyak Artikel</a></li>
-                        <li><a href="#">Health</a></li>
-                        <li><a href="#">Travel</a></li>
                     </ul>
                     <!-- /nav -->
                 </div>

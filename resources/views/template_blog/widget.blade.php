@@ -1,3 +1,16 @@
+<style>
+    .social-widget .gmail {
+        padding: 20px;
+    }
+</style>
+<script type="text/javascript" language="javascript">
+    function myFunction()
+    {
+
+        alert("My Gmail : dasilva22.dc@gmail.com");
+    }
+</script>
+
 <div class="col-md-4">				
    <!-- /ad widget -->
 
@@ -9,22 +22,21 @@
      <div class="social-widget">
          <ul>
             <li>
-               <a href="#" class="social-facebook">
-                  <i class="fa fa-facebook"></i>
-                  <span>21.2K<br>Followers</span>
+               <a href="https://www.instagram.com/celo_daniel_22/" class="social-instagram">
+                  <i class="fa fa-instagram"></i>
+                  <span><font size="1">@celo_daniel_22</font></span>
               </a>
           </li>
           <li>
-           <a href="#" class="social-twitter">
+           <a href="https://twitter.com/DanielCelo22" class="social-twitter">
               <i class="fa fa-twitter"></i>
-              <span>10.2K<br>Followers</span>
+              <span><font size="1">@Daniel_Celo22</font></span>
           </a>
       </li>
       <li>
-       <a href="#" class="social-google-plus">
-          <i class="fa fa-google-plus"></i>
-          <span>5K<br>Followers</span>
-      </a>
+        <div class="gmail">
+          <button onclick="sweet()">Click To<br>See My Gmail</button>
+        </div>
   </li>
 </ul>
 </div>
@@ -38,28 +50,13 @@
  </div>
  <div class="category-widget">
      <ul>
-        @foreach($category as $hasil)
-            <li><a href="#">{{$hasil->name}} <span>{{ $hasil->post->count() }}</span></a></li>
+        @foreach($category_widget as $hasil)
+            <li><a href="{{ route('blog.category', $hasil->slug) }}">{{$hasil->name}} <span>{{ $hasil->post->count() }}</span></a></li>
         @endforeach
     </ul>
 </div>
 </div>
 <!-- /category widget -->
-
-<!-- newsletter widget -->
-<div class="aside-widget">
-  <div class="section-title">
-     <h2 class="title">Newsletter</h2>
- </div>
- <div class="newsletter-widget">
-     <form>
-        <p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
-        <input class="input" name="newsletter" placeholder="Enter Your Email">
-        <button class="primary-button">Subscribe</button>
-    </form>
-</div>
-</div>
-<!-- /newsletter widget -->
 
 <!-- post widget -->
 <div class="aside-widget">

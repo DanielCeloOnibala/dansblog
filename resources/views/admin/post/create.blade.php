@@ -49,7 +49,7 @@
     <button class="btn btn-block btn-primary">Simpan Postingan</button>
 </div>
 </form>
-<script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+<script src="{{asset('public')}}/ckeditor/ckeditor.js"></script>
 <script>
     CKEDITOR.replace( 'content' );
 </script>

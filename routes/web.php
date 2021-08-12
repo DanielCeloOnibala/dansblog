@@ -17,8 +17,11 @@ Route::get('/', 'BlogController@index');
 /*Route::get('/isi_post', function(){
     return view('blog.isi_post');
 });*/
-Route::get('/isi_post/{slug}', 'BlogController@isi_blog')->name('blog.isi');
-Route::get('/list_post', 'BlogController@list_blog')->name('blog.list');
+Route::get('/isi-post/{slug}', 'BlogController@isi_blog')->name('blog.isi');
+Route::get('/list-post', 'BlogController@list_blog')->name('blog.list');
+Route::get('/list-category/{category}', 'BlogController@list_category')->name('blog.category');
+Route::get('/cari', 'BlogController@cari')->name('blog.cari');
+
 
 Route::get('/home', function () {
     return view('home');
