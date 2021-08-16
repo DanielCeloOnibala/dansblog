@@ -10,7 +10,13 @@
         font-family: century gothic;
   }
   .clock {
+    background-color: tomato;
+    border-radius: 10px;
+    padding: 5px;
     color: white;
+  }
+  font {
+    padding: 5px;
   }
 </style>
 <!-- General CSS Files -->
@@ -35,7 +41,7 @@
             <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
             <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
             <font color="white">Waktu Sekarang |&nbsp;</font>
-            <div class="clock" id="clock"></div>
+            <div class="clock" id="clock"></div><font color="white">|&nbsp;<?php echo date(" l");?></font>
         </ul>
     </form>
     <ul class="navbar-nav navbar-right">          
