@@ -1,4 +1,5 @@
 @extends('template_blog.content')
+@section('titlehead', 'DANSBLOG OFFICIAL - Post')
 @section('isi')
 
     @foreach($data as $isi_post)

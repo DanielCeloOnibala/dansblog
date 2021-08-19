@@ -6,9 +6,8 @@
 </style>
 <div class="main-sidebar">
         <aside id="sidebar-wrapper">
-          <div class="sidebar-brand">
-            <img src="{{ asset('public') }}/gambar/DansBlogLogo.png" width="65px" height="65px">
-            <a href="">DansBlog</a>
+          <div class="sidebar-brand">            
+            <font size="3" face="calibri"><b>Homepage Admin DansBlog</b></font>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <img src="{{ asset('public') }}/gambar/DansBlogLogo.png" width="65px" height="65px">

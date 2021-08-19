@@ -1,5 +1,5 @@
 @extends('template_blog.content')
-
+@section('titlehead', 'DANSBLOG OFFICIAL - HOMEPAGE')
 @section('isi')
 <div class="col-md-8 hot-post-left">
 <!-- post -->

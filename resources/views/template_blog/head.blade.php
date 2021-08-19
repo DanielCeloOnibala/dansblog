@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <title>Callie HTML Template</title>
+    <link rel="icon" type="image/x-icon" href="public/gambar/DansBlogLogo.png" />
+    <title>@yield('titlehead')</title>
     <script>        
         function sweet (){
         alert("My Gmail : dasilva22.dc@gmail.com")
