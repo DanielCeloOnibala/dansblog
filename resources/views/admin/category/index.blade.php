@@ -9,6 +9,7 @@
 @endif
 <a href="{{ route('category.create') }}" class="btn btn-sm btn-info">Tambah Kategori</a>
 <br><br>
+<div class="card" style="padding: 6px;">
 <table class="table table-striped table-hover table-sm">
     <thead>
         <tr>
@@ -34,6 +35,7 @@
         @endforeach
     </tbody>
 </table>
+</div>
 {{ $category->links() }}
 
 

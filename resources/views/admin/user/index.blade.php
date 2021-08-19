@@ -9,6 +9,7 @@
 @endif
 <a href="{{ route('user.create') }}" class="btn btn-sm btn-info">Tambah User</a>
 <br><br>
+<div class="card" style="padding: 15px;">
 <table class="table table-striped table-hover table-sm">
     <thead>
         <tr>
@@ -44,6 +45,7 @@
         @endforeach
     </tbody>
 </table>
+</div>
 {{ $user->links() }}
 
 

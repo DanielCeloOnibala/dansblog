@@ -18,6 +18,7 @@
 <form action="{{ route('user.update', $user->id) }}" method="POST" >
     @csrf
     @method('put')
+<div class="card" style="padding: 15px;">
     <div class="form-group">
         <label>Nama User</label>
         <input type="text" class="form-control" name="name" value="{{ $user->name }}">
@@ -50,5 +51,6 @@
         <button class="btn btn-block btn-primary">Update Akun User</button>
         <a href="{{route('user.index')}}" class="btn btn-block btn-danger">Kembali</a>
     </div>
+</div>
 </form>
 @endsection

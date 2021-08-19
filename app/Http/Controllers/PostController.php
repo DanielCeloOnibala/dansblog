@@ -19,7 +19,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $post = Post::paginate(10);
+        $post = Post::paginate(5);
         return view('admin.post.index', compact('post'));
     }
 
@@ -54,11 +54,13 @@ class PostController extends Controller
 
         $post = Post::create([
             'judul' => $request->judul,
+            'featured' => $request->featured,
             'category_id' => $request->category_id,
             'content' => $request->content,
             'gambar' => 'public/uploads/posts/'.$new_gambar,
-            'slug' => Str::slug($request->judul),
-            'user_id' => Auth::id()
+            'slug' => Str::slug($request->judul),            
+            'user_id' => Auth::id(),
+            'featured' => $request->featured,
         ]);
 
         $post->tags()->attach($request->tags);
@@ -116,15 +118,18 @@ class PostController extends Controller
                 'category_id' => $request->category_id,
                 'content' => $request->content,
                 'gambar' => 'public/uploads/posts/'.$new_gambar,
-                'slug' => Str::slug($request->judul)
+                'slug' => Str::slug($request->judul),
+                'featured' => $request->featured,
             ];
         }
         else {
            $post_data = [
             'judul' => $request->judul,
+            'featured' => $request->featured,
             'category_id' => $request->category_id,
             'content' => $request->content,
-            'slug' => Str::slug($request->judul)
+            'slug' => Str::slug($request->judul),
+            'featured' => $request->featured,
         ];
         }
         $post->tags()->sync($request->tags);

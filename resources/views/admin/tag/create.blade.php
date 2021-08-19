@@ -17,6 +17,7 @@
 @endif
 <form action="{{ route('tag.store') }}" method="POST" >
     @csrf
+<div class="card" style="padding: 15px;">
     <div class="form-group">
         <label>Tags</label>
         <input type="text" class="form-control" name="name">
@@ -25,5 +26,6 @@
         <button class="btn btn-block btn-primary">Simpan Tags</button>
         <a href="{{route('tag.index')}}" class="btn btn-block btn-danger">Kembali</a>
     </div>
+</div>
 </form>
 @endsection

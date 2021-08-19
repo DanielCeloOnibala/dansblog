@@ -17,6 +17,7 @@
 @endif
 <form action="{{ route('user.store') }}" method="POST" >
     @csrf
+<div class="card" style="padding: 15px;">
     <div class="form-group">
         <label>Nama User</label>
         <input type="text" class="form-control" name="name">
@@ -41,5 +42,6 @@
         <button class="btn btn-block btn-primary">Buat Akun User Baru</button>
         <a href="{{route('user.index')}}" class="btn btn-block btn-danger">Kembali</a>
     </div>
+</div>
 </form>
 @endsection

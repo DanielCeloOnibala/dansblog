@@ -8,6 +8,7 @@
   {{ Session('success') }}
 </div>
 @endif
+<div class="card" style="padding: 15px;">
 <table class="table table-striped table-hover table-sm">
     <thead>
         <tr>
@@ -45,6 +46,7 @@
         @endforeach
     </tbody>
 </table>
+</div>
 {{ $post->links() }}
 
 

@@ -18,6 +18,7 @@
 <form action="{{ route('category.update', $category->id) }}" method="POST" >
     @csrf
     @method('patch')
+<div class="card" style="padding: 15px;">
     <div class="form-group">
         <label>Kategori</label>
         <input type="text" class="form-control" name="name" value="{{ $category->name }}">
@@ -26,5 +27,6 @@
         <button class="btn btn-block btn-primary">Update Kategori</button>
         <a href="{{route('category.index')}}" class="btn btn-block btn-danger">Kembali</a>
     </div>
+</div>
 </form>
 @endsection

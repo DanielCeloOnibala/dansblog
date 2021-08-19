@@ -13,7 +13,7 @@ class BlogController extends Controller
     {
         $category_widget = Category::all();
         $tags = Tags::latest()->take(6)->get();
-        $data = $post->latest()->take(4)->get();
+        $data = $post->latest()->take(6)->get();
         return view('blog', compact('data', 'category_widget', 'tags'));
     }
 
@@ -28,8 +28,8 @@ class BlogController extends Controller
     public function list_blog()
     {
         $category_widget = Category::all();
-        $tags = Tags::latest()->take(6)->get();
-        $data = Post::latest()->paginate(3);
+        $tags = Tags::latest()->take(5)->get();
+        $data = Post::latest()->paginate(5);
         return view('blog.list_post', compact('data', 'category_widget', 'tags'));
     }
 

@@ -17,6 +17,7 @@
 @endif
 <form action="{{ route('post.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
+<div class="card" style="padding: 15px;">
     <div class="form-group">
         <label>Judul</label>
         <input type="text" class="form-control"  name="judul">
@@ -49,6 +50,7 @@
 <div class="form-group">
     <button class="btn btn-block btn-primary">Simpan Postingan</button>
     <a href="{{route('post.index')}}" class="btn btn-block btn-danger">Kembali</a>
+</div>
 </div>
 </form>
 <script src="{{asset('public')}}/ckeditor/ckeditor.js"></script>

@@ -18,6 +18,7 @@
 <form action="{{ route('tag.update', $tags->id) }}" method="POST" >
     @csrf
     @method('patch')
+<div class="card" style="padding: 15px;">
     <div class="form-group">
         <label>Tags</label>
         <input type="text" class="form-control" name="name" value="{{ $tags->name }}">
@@ -26,5 +27,6 @@
         <button class="btn btn-block btn-primary">Update Tags</button>
         <a href="{{route('tag.index')}}" class="btn btn-block btn-danger">Kembali</a>
     </div>
+</div>
 </form>
 @endsection
